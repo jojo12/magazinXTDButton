@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.5" type="plugin" group="editors-xtd" method="upgrade">
+    <name>plg_editors-xtd_agosmmapbutton</name>
+    <creationDate>August 2016</creationDate>
+    <author>Astrid Günther</author>
+    <authorEmail>info@astrid-guenther.de</authorEmail>
+    <authorUrl>http://www.astrid-guenther.de</authorUrl>
+    <copyright>(c) 2016 Astrid Günther - http://www.astrid-guenther.de</copyright>
+    <license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+    <version>0.0.1</version>
+
+    <description>PLG_AGOSMMAPBUTTON_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="agosmmapbutton">agosmmapbutton.php</filename>
+    </files>
+</extension>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.5" type="component" method="upgrade">
+    <name>COM_AGOSMMAPBUTTONHELP</name>
+    <creationDate>August 2016</creationDate>
+    <author>Astrid Günther</author>
+    <authorEmail>info@astrid-guenther.de</authorEmail>
+    <authorUrl>http://www.astrid-guenther.de</authorUrl>
+    <copyright>(c) 2016 Astrid Günther - http://www.astrid-guenther.de</copyright>
+    <license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+    <version>0.0.1</version>
+    <description>COM_AGOSMMAPBUTTONHELP_XML_DESCRIPTION</description>
+
+    <administration>
+        <files folder="admin">
+            <filename>controller.php</filename>
+            <filename>agosmmapbuttonhelp.php</filename>
+		      <folder>views</folder>
+		      <folder>media</folder>
+        </files>
+    </administration>
+
+    <media destination="com_agosmmapbuttonhelp" folder="media">
+        <folder>js</folder>
+    </media>
+</extension>

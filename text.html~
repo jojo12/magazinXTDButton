@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verschachtelte Elemente</title>
+</head>
+	
+<body>
+<h1>
+Plugin-Entwicklung - Teil 3 Editoren-XTD Plugin mit Modal Popup</h1>
+
+
+<p>Das Joomla! Plugin, das in Teil 1, Teil 2 und im Teil 3 dieser Serie "Erste Schritte in der Plugin-Entwicklung" 
+erstellt wurde kann schon ganz viel. Nun machen wir die Anwendung mithilfe eines weiteren Plugins benutzerfreundlicher.</p>
+
+<h2>Was werden wir genau machen?</h2>
+<p>In diesem Tutorial werden wir ein Plugin für den Joomla! Content-Editor bauen. 
+Diese Plugins werden Editoren-XTD Plugins genannt und erweitern die Joomla Content-Editor-Funktionalität.
+Konkret erstellen wir ein Plugin, das eine Schaltfläche im Editor angezeigt. 
+Per Klick auf diese Schaltfläche öffnet sich ein Modal-Fenster.
+In dieses Modal-Fenster ist ein Formular eingefügt, über das der Beitragsersteller bestimmte Eingaben leichte vornehmen kann.
+Da wir im ersten Tutorial ein Plugin geschrieben haben, dass Koordinaten umwandelt, fügen wir in diesem Teil Koordinaten 
+über unsere Plugin in den Beitrag ein! Gleichzeitig ist es so möglich ein unverwechselbares Zeichen mit einzufügen. 
+Zum Beispiel könnten wir die Koordinaten mit dem Text <code>{coordtomap} 50.000 7.000 {/}</code> umgeben.
+
+Beginnen wir also mit der Installationsdatei oder Manifest-Datei. Diese XML-Datei haben wir schon besprochen und 
+hier gibt es eigentlich nichts Neues. Hier ist sie:</p>
+
+
+
+<pre><code>
+	$table = JTable::getInstance('deineTabelle');
+	// Wo soll das neue Element eingefügt werden?
+	$table->setLocation($reference_id, 'first-child');
+	// Daten binden.
+	$table->bind($data_array);
+	// Stelle sicher, dass ein neues Element angelegt wird.
+	$table->id = 0;
+	// Notwendige Prüfungen.
+	$table->check();
+	// Alles speichern.
+	$table->store();
+
+</code></pre>
+
+
+
+<h4>Ein Element löschen</h4>
+
+<p>
+Last but not least müssen hin und wieder Elemente gelöscht werden. 
+Dies kannst du auch mithilfe eines Befehls bewerkstelligen. <br>
+<strong>ACHTUNG</strong>: Mit diesem Befehl werden gleichzeitig alle Nachkommen gelöscht!
+</p>
+
+<pre><code>
+	$table->delete($node_id;
+</code></pre>
+
+
+
+<h2>Das Plugin ist fertig</h2>
+
+<p>Ich hoffe, dass dieses Tutorial hilfreich für dich war. 
+Habe ich etwas vergessen oder nicht gut erklärt? Hast du eine bessere Lösung? 
+Bitte teile dies doch hier in den Kommentaren.</p>
+
+<strong><p>Quellen:<br></strong>
+https://groups.google.com/forum/#!topic/joomla-dev-cms/pkHm7F5yer8<br>
+https://docs.joomla.org/Using_nested_sets<br>
+
+
+
+
+
+
+
+
+
+
+

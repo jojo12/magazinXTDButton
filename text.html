@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verschachtelte Elemente</title>
+</head>
+	
+<body>
+<h1>
+Plugin-Entwicklung - Teil 3 Editoren-XTD Plugin mit Modal Popup</h1>
+
+
+<p>Das Joomla! Plugin, das in Teil 1, Teil 2 und im Teil 3 dieser Serie "Erste Schritte in der Plugin-Entwicklung" 
+erstellt wurde kann schon ganz viel. Nun machen wir die Anwendung mithilfe eines weiteren Plugins benutzerfreundlicher.</p>
+
+<h2>Was werden wir genau machen?</h2>
+<p>In diesem Tutorial werden wir ein Plugin für den Joomla! Content-Editor bauen. 
+Diese Plugins werden Editoren-XTD Plugins genannt und erweitern die Joomla Content-Editor-Funktionalität.
+Konkret erstellen wir ein Plugin, das eine Schaltfläche im Editor anzeigt. 
+Per Klick auf diese Schaltfläche öffnet sich ein Modal-Fenster.
+In dieses Modal-Fenster ist ein Formular mit zwei Textfeldern eingefügt. 
+Der Beitragsersteller kann nun die Koordinaten in diese Textfelder eingeben.
+Da wir im ersten Tutorial ein Plugin geschrieben haben, dass Koordinaten mit einem Link versieht, 
+fügen wir in diesem Teil nun diese Koordinaten über unsere Plugin in den Beitrag ein! 
+Gleichzeitig ist es so möglich ein unverwechselbares Zeichen mit hinzuzufügen. 
+Zum Beispiel könnten wir die Koordinaten mit dem Text <code>{agosmmapbutton  }</code> umgeben.
+
+Beginnen wir also mit der Installationsdatei oder Manifest-Datei. Diese XML-Datei haben wir schon besprochen und 
+hier gibt es eigentlich nichts Neues. Hier ist sie:</p>
+
+
+
+<pre><code>
+	$table = JTable::getInstance('deineTabelle');
+	// Wo soll das neue Element eingefügt werden?
+	$table->setLocation($reference_id, 'first-child');
+	// Daten binden.
+	$table->bind($data_array);
+	// Stelle sicher, dass ein neues Element angelegt wird.
+	$table->id = 0;
+	// Notwendige Prüfungen.
+	$table->check();
+	// Alles speichern.
+	$table->store();
+
+</code></pre>
+
+
+Alle Dateien kannst du hier herunterladen:
+
+<strong><p>Quellen:<br></strong>
+
+
+
+
+
+
+
+
+
+
