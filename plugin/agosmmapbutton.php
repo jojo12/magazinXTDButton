@@ -8,9 +8,9 @@ class PlgButtonAgosmmapbutton extends JPlugin
 
 	public function onDisplay($name)
 	{
-		JHtml::_('behavior.modal');
+	
 		JHtml::script('plg_button_agosmmapbutton/button.js');
-		JHtml::stylesheet('plg_button_agosmmapbutton/button.css', array(), true);
+	
 
 		$link = 'index.php?option=com_agosmmapbuttonhelp'
 				. '&amp;view=button'
